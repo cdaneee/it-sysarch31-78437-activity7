@@ -1,0 +1,84 @@
+/* ProductPage.css */
+.related-items-text{
+  margin-top: 600px;
+  text-align: start;
+}
+.product-page-container {
+  display: flex;
+  padding: 50px;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  max-width: 200%;
+  margin-left: 170px;
+  border-radius: 5%;
+}
+
+.product-details2 {
+  flex: 2;
+  margin-left: 600px;
+}
+
+.product-details2 {
+  text-align: left;
+  font-size: 22px;
+}
+
+
+.product-details2 p b {
+  color: #000000;
+  font-size: 20px;
+}
+
+.image-slider {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.image-slider img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+}
+
+.small-image-button {
+  width: 100px; /* Baguhin ang laki ng mga maliit na imahe base sa iyong preference */
+  height: 100px; /* Baguhin ang laki ng mga maliit na imahe base sa iyong preference */
+  margin-right: 10px; /* Paggamit ng margin upang magkaroon ng espasyo sa pagitan ng mga maliit na imahe */
+}
+
+.small-image-button img {
+  width: 100%; /* Upang ang larawan ay umayon sa sukat ng kanyang parent element */
+  height: 100%; /* Upang ang larawan ay umayon sa sukat ng kanyang parent element */
+  object-fit:c; /* Upang ang larawan ay umayon sa sukat ng kanyang parent element ngunit hindi ito mag-stretch */
+}
+
+.product-colors__list {
+  /* Paggamit ng flexbox upang ayusin ang mga maliit na imahe ng produkto */
+  display: flex;
+  margin-top: 30px;
+  margin-left: 2px;
+}
+
+
+.cart-btn {
+  color: rgb(255, 255, 255); /* Kulay ng text */
+  padding: 10px 20px; /* Padding sa loob ng button */
+  font-size: 16px; /* Size ng font */
+  border: none; /* Walang border */
+  background-color: #000000;
+  border-radius: 100px; /* Radius ng border */
+  cursor: pointer; /* Magiging pointer kapag nag hover */
+}
+
+.cart-btn:hover {
+  background-color: #d129c3; /* Kulay ng background kapag nag hover */
+}

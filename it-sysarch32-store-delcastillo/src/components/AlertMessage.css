@@ -1,0 +1,20 @@
+/* AlertMessage.css */
+
+.alert-container {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fac9c9;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alert-message {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
