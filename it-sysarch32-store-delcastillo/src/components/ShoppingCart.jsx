@@ -1,12 +1,14 @@
 import React from "react";
-import './Cart.css';
-
+import  './Cart.css';
 const ShoppingCart = ({ cart }) => {
-  // Calculate order total
   const orderTotal = cart.reduce((total, item) => {
-    const itemTotal = (item.price || 0) * (item.quantity || 0);
+    const itemTotal = (item.productPrice || 0) * (item.quantity || 0);
     return total + itemTotal;
   }, 0).toFixed(2);
+  const handleCheckout = () => {
+    // Implement your checkout logic here
+    alert("Checkout functionality will be implemented soon!");
+  };
 
   return (
     <div className="shopping-cart">
@@ -15,11 +17,25 @@ const ShoppingCart = ({ cart }) => {
         <p>No items added to cart</p>
       ) : (
         <div>
-          <p>Items in cart: {cart.length}</p>
-          <div className="order-summary">
+           <div className="order-summary">
             <h3>Order Summary</h3>
-            <p>Order Total: {isNaN(orderTotal) ? 'Invalid total' : `$${orderTotal}`}</p>
-            <button className="checkout-btn">Checkout</button>
+            <p>Order Total: {isNaN(orderTotal) ? "Invalid total" : `$${orderTotal}`}</p>
+            <button className="checkout-btn" onClick={handleCheckout}>Checkout</button>
+          </div>
+          <p>Items in cart: {cart.length}</p>
+          
+          <div className="cart-items">
+            {cart.map((item) => (
+              <div key={item.id} className="cart-item">
+                <img src={item.productImage} alt={item.productName} className="cart-item-image" />
+                <div>
+                <p>{item.productName}</p>
+                  <p>Price: {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'PHP' }).format(item.productPrice)}</p>
+                  <p>Quantity: {item.quantity}</p>
+                  
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}

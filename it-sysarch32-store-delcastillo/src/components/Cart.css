@@ -75,4 +75,9 @@
   }
   
 
-  
+  /* Add styles for the product image in the shopping cart */
+.cart-item-image {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add margin for spacing */
+}

@@ -7,7 +7,7 @@
   import { Link } from 'react-router-dom'; 
   import AlertMessage from './AlertMessage'; 
   
-    const ProductCard = ({ product, className, onAddToCart, cartItems }) => {
+    const ProductCard = ({ product, className, onAddToCart }) => {
     const { productName, productDescription, productPrice, productImage } = product;
   
     const handleAddToCartClick = () => {
